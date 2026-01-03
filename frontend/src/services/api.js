@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://contact-management-app-0mgw.onrender.com/api",
+  baseURL: import.meta.env.VITE_API_BASE_URL,
 });
 
 export const getContacts = () => API.get("/contacts");
